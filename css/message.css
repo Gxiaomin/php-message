@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li, dl, ol {
+    list-style: none;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #99999930;
+}
+header, section, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 头部样式 */
+header {
+    position: fixed;
+    left: 10%;
+    top: 0;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: cadetblue;
+}
+header p {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* 留言列表面板 */
+section {
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    bottom: 50px;
+    margin: 20px 0;
+}
+.message-panel {
+    width: 100%;
+    height: 70%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.message-panel .panel-title {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    padding-left: 15px;
+    background-color: #999;
+}
+.message-panel .message-list {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    overflow-y: auto;
+}
+.message-panel .message-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* 留言列表样式 */
+.message-list li .message {
+    width: 100%;
+    padding-left: 20px;
+}
+.message-list li .message-user {
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: #398fc7;
+}
+.message-list li .message-content {
+    text-indent: 25px;
+    font-size: 14px;
+    color: #74942f;
+}
+.message-list li .handle {
+    width: 100px;
+    text-align: center;
+}
+.message-list li .handle-delete {
+    padding: 0 5px;
+    border-bottom: solid 1px #999;
+}
+.message-list li .handle-delete:hover {
+    color: skyblue;
+    cursor: pointer;
+    border-color: skyblue;
+}
+
+/* 留言去区域样式 */
+.message-board {
+    width: 100%;
+    height: 20%;
+    margin-top: 50px;
+}
+.message-form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.message-board-left {
+    flex: 1;
+    box-sizing: border-box;
+}
+.message-board textarea {
+    display: block;
+    width: 100%;
+    height: calc(100% - 32px);
+    outline:none;
+    box-sizing: border-box;
+    border: 1px solid #dddee1;
+    border-radius: 4px;
+    color: #495060;
+    background-color: #fff;
+    background-image: none;
+    position: relative;
+    cursor: text;
+}
+.message-board button {
+    width: 70px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+/* 底部样式 */
+footer {
+    position: fixed;
+    left: 10%;
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: #999;
+}
