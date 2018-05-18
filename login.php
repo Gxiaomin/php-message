@@ -38,7 +38,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>留言板</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/login.css" />
 </head>
 <body>
     <div class="wrapper">

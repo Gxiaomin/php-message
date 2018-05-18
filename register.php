@@ -7,7 +7,6 @@
     $input = new Input();
     $act = $input->get('act');
 
-    
     if($act !== false) {
         $admin = $input->post('admin');
         $pwd = $input->post('password');
@@ -46,7 +45,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>留言板</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/login.css" />
 </head>
 <body>
     <div class="wrapper">

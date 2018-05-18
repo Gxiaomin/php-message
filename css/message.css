@@ -85,7 +85,7 @@ section {
     min-height: 50px;
     box-sizing: border-box;
     background-color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 10px;
 }
 
@@ -111,6 +111,7 @@ section {
 }
 .message-list li .handle-delete {
     padding: 0 5px;
+    color: #999;
     border-bottom: solid 1px #999;
 }
 .message-list li .handle-delete:hover {
@@ -124,6 +125,9 @@ section {
     width: 100%;
     height: 20%;
     margin-top: 50px;
+    border: solid 1px #999;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 .message-form {
     display: flex;
@@ -138,7 +142,9 @@ section {
 .message-board textarea {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 80%;
+    padding: 5px 0;
+    margin-top: 10px;
     outline:none;
     box-sizing: border-box;
     border: 1px solid #dddee1;
@@ -148,9 +154,12 @@ section {
     background-image: none;
     position: relative;
     cursor: text;
+    box-sizing: border-box;
 }
 .message-board button {
     width: 70px;
+    height: 80%;
+    margin-top: 10px;
     outline: none;
     border-radius: 4px;
     cursor: pointer;

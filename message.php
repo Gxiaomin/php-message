@@ -10,6 +10,8 @@
     $result = $mysqli->query($select);
     $userInfo = $result->fetch_array();
 
+    //存储用户信息
+    $_SESSION['userInfo'] = $userInfo;
     //查询sql
     $sql = "SELECT * FROM msg ORDER BY id DESC";
     //读取数据库message中留言列表
@@ -28,6 +30,7 @@
     <title>留言板</title>
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/message.css" />
+    <script type="text/javascript" src="./js/cookie.js"></script>
 </head>
 <body>
     <header>
@@ -56,7 +59,7 @@
                             if($userInfo['role'] == 2) {
                         ?>
                             <div class="handle">
-                                <span class="handle-delete">删除</span>
+                                <a href="delete.php?id=<?php echo $row['id'];?>" class="handle-delete">删除</a>
                             </div>
                         <?php
                             }
@@ -80,4 +83,9 @@
         @初步尝试使用PHP写留言板功能~~~
     </footer>
 </body>
+<script type="text/javascript">
+    window.onload = function () {
+
+    }
+</script>
 </html>
