@@ -33,7 +33,7 @@ body{font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial,
 "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3",
 FontAwesome, sans-serif;font-size:12px;}
 
-input {
+input[type='text'], input[type='password']{
     width: 100%;
     outline:none;
     background-color: transparent;

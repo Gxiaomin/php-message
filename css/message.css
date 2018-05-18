@@ -24,12 +24,28 @@ header {
     top: 0;
     height: 100px;
     text-align: center;
-    line-height: 100px;
     background-color: cadetblue;
+}
+header .user-wrapper {
+    position: fixed;
+    top: 0;
+    right: 10%;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+}
+header .user-wrapper .logout {
+    text-decoration: none;
+    text-decoration: underline;
+    margin: 0 20px;
+    cursor: pointer;
 }
 header p {
     font-size: 24px;
     color: #fff;
+    height: 100px;
+    line-height: 100px;
 }
 
 /* 留言列表面板 */
@@ -122,7 +138,7 @@ section {
 .message-board textarea {
     display: block;
     width: 100%;
-    height: calc(100% - 32px);
+    height: 100%;
     outline:none;
     box-sizing: border-box;
     border: 1px solid #dddee1;

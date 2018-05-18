@@ -1,7 +1,15 @@
 <?php 
     session_start();
+
     //引入 连接数据库方法
     include ("db.php");
+
+    //读取用户信息
+    $user = $_SESSION['user'];
+    $select = "select * from token where user='$user'";
+    $result = $mysqli->query($select);
+    $userInfo = $result->fetch_array();
+
     //查询sql
     $sql = "SELECT * FROM msg ORDER BY id DESC";
     //读取数据库message中留言列表
@@ -23,6 +31,12 @@
 </head>
 <body>
     <header>
+        <div class="user-wrapper">
+            <?php
+                echo $user."，你好！"
+            ?>
+            <a href="logout.php" class="logout">退出</a>
+        </div>
         <p>欢迎来到小小留言板~~~~</p>
     </header>
     <section>
@@ -37,9 +51,16 @@
                             <p class="message-user"><?php echo $row['username']."："?></p>
                             <div class="message-content"><?php echo $row['content']?></div>
                         </div>
-                        <div class="handle">
-                            <span class="handle-delete">删除</span>
-                        </div>
+                        <!-- 只有管理员有删除权限 -->
+                        <?php
+                            if($userInfo['role'] == 2) {
+                        ?>
+                            <div class="handle">
+                                <span class="handle-delete">删除</span>
+                            </div>
+                        <?php
+                            }
+                        ?>
                     </li>
                 <?php
                     }
@@ -49,7 +70,6 @@
         <div class="message-board">
             <form class="message-form" action="save.php" method="post">
                 <div class="message-board-left">
-                    <input type="text" name="user" placeholder="请输入昵称">
                     <textarea name="msg" placeholder="请输入留言内容~~~~"></textarea>
                 </div>
                 <button type="submit">提交</button>

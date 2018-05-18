@@ -23,13 +23,19 @@ html, body, .wrapper{
     background-color: cadetblue;
     border-radius: 4px;
 }
+.login-form header {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
 .login-form input {
     width: 70%;
     margin-bottom: 25px;
     color: #000;
 }
 .form-footer {
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +51,7 @@ html, body, .wrapper{
     border: none;
     border-radius: 4px;
 }
-.btn:first-child {
+.btn.login {
     margin-right: 30px;
 }
 .go-register-btn {
@@ -53,4 +59,23 @@ html, body, .wrapper{
     text-decoration: underline;
     font-size: 16px;
     color: skyblue;
+}
+.radio-box {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+label {
+    width: 30%;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+label input[type="radio"] {
+    width: 20%;
+    margin-right: 10px;
+    
+}
+label input:checked {
+    color: pink;
 }

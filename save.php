@@ -1,14 +1,15 @@
 <?php
+    session_start();
     //引入相关文件
     include ("input.php");
     include ("db.php");
 
     $i = new Input();
     $msg = $i->post('msg');
-    $user = $i->post('user');
+    $user = $_SESSION['user'];
     //必填校验
-    if($msg === '' || $user === '') {
-        echo "用户名或留言内容不能为空！";
+    if($msg === '') {
+        echo "留言内容不能为空！";
         exit;
     }
 

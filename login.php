@@ -37,7 +37,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>留言板</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css" />
 </head>
@@ -45,7 +44,7 @@
     <div class="wrapper">
         <form class="login-form" action="login.php?act=chk" method="post">
             <input type="text" name="admin" placeholder="请输入用户名">
-            <input type="password" name="password" placeholder="请输入密码">
+            <input type="text" onfocus="this.type='password'" name="password" placeholder="请输入密码">
             <div class="form-footer">
                 <button class="login btn" type="submit">登录</button>
                 <a class="go-register-btn" href="register.php">立即注册</a>
